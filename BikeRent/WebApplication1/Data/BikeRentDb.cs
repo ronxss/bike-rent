@@ -11,6 +11,6 @@ namespace BikeRent.Data
 
         public DbSet<Motorcycle> Motorcycles => Set<Motorcycle>();
         public DbSet<Biker> Bikers => Set<Biker>();
-        public DbSet<Location> Locations => Set<Location>();
+        public DbSet<Rent> Rents=> Set<Rent>();
     }
 }
