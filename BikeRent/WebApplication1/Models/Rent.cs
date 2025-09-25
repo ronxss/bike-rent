@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using BikeRent.Enums;
 
 namespace BikeRent.Models
 {
@@ -7,6 +8,8 @@ namespace BikeRent.Models
     {
         [Key]
         public int Id { get; set; }
+
+        public int DailyValue { get; set; }
 
         [ForeignKey("BikerId")]
         public int BikerId { get; set; }
@@ -22,7 +25,7 @@ namespace BikeRent.Models
 
         public DateTime PreviewEndDate { get; set; }
 
-        public int Plan { get; set; }
+        public PlansEnum Plan { get; set; }
 
     }
 }
