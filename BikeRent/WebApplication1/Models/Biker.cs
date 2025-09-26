@@ -5,22 +5,6 @@ namespace BikeRent.Models
 {
     public class Biker
     {
-        [Key]
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-        [MaxLength(14)]
-        public string Cnpj { get; set; }
-        public DateTime BirthDate { get; set;}
-        
-        [MaxLength(20)]
-        public string Cnh { get; set; }
-
-        [MaxLength(3)] 
-        public string CnhType { get; set; }
-
-        public byte[] CnhImage { get; set; }
-
         public Biker(string name, string cnpj, DateTime birthDate, string cnh, string cnhType, byte[]? cnhImage = null)
         {
             Name = name;
@@ -30,6 +14,23 @@ namespace BikeRent.Models
             CnhType = cnhType;
             CnhImage = cnhImage;
         }
+
+        public DateTime BirthDate { get; set; }
+
+        [MaxLength(20)]
+        public string Cnh { get; set; }
+
+        public byte[] CnhImage { get; set; }
+
+        [MaxLength(3)]
+        public string CnhType { get; set; }
+
+        [MaxLength(14)]
+        public string Cnpj { get; set; }
+
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
         public bool PossuiCategoriaA()
         {
             return CnhType == "A" || CnhType == "A+B";

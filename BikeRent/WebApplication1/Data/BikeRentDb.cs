@@ -9,8 +9,8 @@ namespace BikeRent.Data
     {
         public BikeRentDb(DbContextOptions<BikeRentDb> options) : base(options) { }
 
-        public DbSet<Motorcycle> Motorcycles => Set<Motorcycle>();
         public DbSet<Biker> Bikers => Set<Biker>();
+        public DbSet<Motorcycle> Motorcycles => Set<Motorcycle>();
         public DbSet<Rent> Rents=> Set<Rent>();
     }
 }

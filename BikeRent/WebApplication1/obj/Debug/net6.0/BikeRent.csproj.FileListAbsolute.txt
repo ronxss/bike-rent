@@ -48,3 +48,5 @@ C:\Users\Ronaldo\Desktop\Desafio-Backend\bike-rent\BikeRent\WebApplication1\obj\
 C:\Users\Ronaldo\Desktop\Desafio-Backend\bike-rent\BikeRent\WebApplication1\obj\Debug\net6.0\BikeRent.pdb
 C:\Users\Ronaldo\Desktop\Desafio-Backend\bike-rent\BikeRent\WebApplication1\obj\Debug\net6.0\BikeRent.genruntimeconfig.cache
 C:\Users\Ronaldo\Desktop\Desafio-Backend\bike-rent\BikeRent\WebApplication1\obj\Debug\net6.0\ref\BikeRent.dll
+C:\Users\Ronaldo\Desktop\Desafio-Backend\bike-rent\BikeRent\WebApplication1\bin\Debug\net6.0\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\Ronaldo\Desktop\Desafio-Backend\bike-rent\BikeRent\WebApplication1\bin\Debug\net6.0\Microsoft.Exchange.WebServices.dll

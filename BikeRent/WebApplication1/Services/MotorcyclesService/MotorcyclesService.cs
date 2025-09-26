@@ -40,6 +40,37 @@ namespace BikeRent.Services.MotorcyclesService
 
             return serviceResponse;
         }
+        public async Task<ServiceResponse<List<Motorcycle>>> DeleteMotorcycle(int id)
+        {
+            ServiceResponse<List<Motorcycle>> serviceResponse = new ServiceResponse<List<Motorcycle>>();
+
+            Motorcycle motorcycle = await _context.Motorcycles.FirstOrDefaultAsync(m => m.Id == id);
+
+            try
+            {
+                if (motorcycle == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Nenhuma moto Encontrada";
+                    serviceResponse.Sucesso = false;
+
+                    return serviceResponse;
+                }
+
+                _context.Motorcycles.Remove(motorcycle);
+                await _context.SaveChangesAsync();
+
+                serviceResponse.Dados = _context.Motorcycles.ToList();
+
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
+        }
+
         public async Task<ServiceResponse<List<Motorcycle>>> GetMotorcycle()
         {
             ServiceResponse<List<Motorcycle>> serviceResponse = new ServiceResponse<List<Motorcycle>>();
@@ -106,36 +137,6 @@ namespace BikeRent.Services.MotorcyclesService
 
             return serviceResponse;
 
-        }
-        public async Task<ServiceResponse<List<Motorcycle>>> DeleteMotorcycle(int id)
-        {
-            ServiceResponse<List<Motorcycle>> serviceResponse = new ServiceResponse<List<Motorcycle>>();
-
-            Motorcycle motorcycle =  await _context.Motorcycles.FirstOrDefaultAsync(m => m.Id == id);
-
-            try
-            {
-                if (motorcycle == null)
-                {
-                    serviceResponse.Dados = null;
-                    serviceResponse.Mensagem = "Nenhuma moto Encontrada";
-                    serviceResponse.Sucesso = false;
-
-                    return serviceResponse;
-                }
-
-                _context.Motorcycles.Remove(motorcycle);
-                await _context.SaveChangesAsync();
-
-                serviceResponse.Dados = _context.Motorcycles.ToList();
-
-            }
-            catch (Exception ex)
-            {
-                serviceResponse.Mensagem = ex.Message;
-                serviceResponse.Sucesso = false;
-            }
-            return serviceResponse;
         }
     }
 }

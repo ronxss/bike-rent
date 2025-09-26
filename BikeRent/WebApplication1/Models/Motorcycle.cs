@@ -5,16 +5,6 @@ namespace BikeRent.Models
 {
     public class Motorcycle
     {
-        [Key]
-        public int Id { get; set; }
-
-        public int Year { get; set; }
-        public string Model { get; set; }
-
-        [Required]
-        
-        public string Plate { get; set; }
-
         public Motorcycle(int year, string model, string plate)
         {
             if (string.IsNullOrWhiteSpace(plate))
@@ -24,5 +14,15 @@ namespace BikeRent.Models
             Model = model;
             Plate = plate;
         }
+
+        [Key]
+        public int Id { get; set; }
+
+        public string Model { get; set; }
+        [Required]
+
+        public string Plate { get; set; }
+
+        public int Year { get; set; }
     }
 }
