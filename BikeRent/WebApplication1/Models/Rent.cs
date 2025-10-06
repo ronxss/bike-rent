@@ -19,6 +19,7 @@ namespace BikeRent.Models
         [Required]
         public DateTime EndDate { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
         [ForeignKey("MotorcycleId")]

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BikeRent.Services.RentsService
 {
-    public class RentsService
+    public class RentsService : IRentInterface
     {
         private readonly BikeRentDb _context;
 

@@ -1,16 +1,20 @@
 ﻿using BikeRent.Data;
+using BikeRent.Events;
 using BikeRent.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BikeRent.Services.MotorcyclesService
 {
-    public class MotorcyclesService
+    public class MotorcyclesService : IMotorcycleInterface
     {
         private readonly BikeRentDb _context;
+        private readonly RegisteredMotorcycle _publisher;
 
-        public MotorcyclesService(BikeRentDb context)
+
+        public MotorcyclesService(BikeRentDb context, RegisteredMotorcycle publisher)
         {
             _context = context;
+            _publisher = publisher;
         }
 
         public async Task<ServiceResponse<List<Motorcycle>>> CreateMotorcycle(Motorcycle newMotorcycle)
@@ -30,6 +34,7 @@ namespace BikeRent.Services.MotorcyclesService
                 _context.Add(newMotorcycle);
                 await _context.SaveChangesAsync();
 
+                _publisher.Publish(newMotorcycle);
                 serviceResponse.Dados = _context.Motorcycles.ToList();
             }
             catch (Exception ex)

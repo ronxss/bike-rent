@@ -28,6 +28,7 @@ namespace BikeRent.Models
         [MaxLength(14)]
         public string Cnpj { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }

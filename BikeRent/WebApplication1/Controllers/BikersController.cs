@@ -15,12 +15,12 @@ namespace BikeRent.Controllers;
             _bikersInterface = bikersInterface;
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<Biker>>>> CreateBiker(Biker newBiker)
             {
             return Ok(await _bikersInterface.CreateBiker(newBiker));
             }
-        [HttpPost]
+        [HttpPut]
         public async Task<ActionResult<ServiceResponse<List<Biker>>>> UpdateBikerCnh(int id, byte[] cnhImage)
         {
             return Ok(await _bikersInterface.UpdateBikerCnh(id, cnhImage));

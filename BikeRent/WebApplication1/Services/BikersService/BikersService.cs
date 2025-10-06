@@ -1,10 +1,9 @@
 ﻿using BikeRent.Data;
 using BikeRent.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace BikeRent.Services.BikersService
 {
-    public class BikersService
+    public class BikersService : IBikersInterface
     {
         private readonly BikeRentDb _context;
 

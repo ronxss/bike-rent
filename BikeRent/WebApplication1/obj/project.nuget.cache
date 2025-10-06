@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pbO1QQmra09AI53GHDMKFUJXeT3j7WMakxolpebObJFyFYygrRarx9O90pXCmrxPMywkynuDxbisBVbfZa9mzA==",
+  "dgSpecHash": "H9BfWh5fegq8OmY5tpbHWXN6ju5hAmpnfJkLtnA1gQeZTVTlglfX8RoTlghFjX70Q5HUsdow+Rd21CUaiBNyjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ronaldo\\Desktop\\Desafio-Backend\\bike-rent\\BikeRent\\WebApplication1\\BikeRent.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.3\\microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
     "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.3\\microsoft.entityframeworkcore.design.7.0.3.nupkg.sha512",
     "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.3\\microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
-    "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.36\\microsoft.entityframeworkcore.tools.6.0.36.nupkg.sha512",
+    "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.3\\microsoft.entityframeworkcore.tools.7.0.3.nupkg.sha512",
     "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\microsoft.exchange.webservices.2.2.0.nupkg.sha512",
     "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Ronaldo\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",

@@ -15,6 +15,7 @@ namespace BikeRent.Models
             Plate = plate;
         }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
 

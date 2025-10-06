@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using BikeRent.Data;
+using BikeRent.Services.BikersService;
+using BikeRent.Services.MotorcyclesService;
+using BikeRent.Services.RentsService;
+using BikeRent.Events;
+using BikeRent.Services.RabbitMQService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,11 +15,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Dependency
+builder.Services.AddScoped<IBikersInterface, BikersService>();
+builder.Services.AddScoped<IMotorcycleInterface, MotorcyclesService>();
+builder.Services.AddScoped<IRentInterface, RentsService>();
+
 //Postgres
 var connectionString = builder.Configuration.GetConnectionString("PostgreSQLConnection");
+
 builder.Services.AddDbContext<BikeRentDb>(options =>
 options.UseNpgsql(connectionString));
 
+builder.Services.AddControllers();
+
+//RabbitMQ
+builder.Services.AddSingleton<RabbitMqService>();
+builder.Services.AddScoped<RegisteredMotorcycle>();
+builder.Services.AddHostedService<MotorcycleConsumer2024>();
 builder.Services.AddControllers();
 
 var app = builder.Build();

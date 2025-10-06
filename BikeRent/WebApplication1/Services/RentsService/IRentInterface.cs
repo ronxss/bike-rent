@@ -6,7 +6,7 @@ namespace BikeRent.Services.RentsService
     {
         Task<ServiceResponse<List<Rent>>> CreateRent(Rent newRent);
 
-        Task<ServiceResponse<Rent>> GetRentById(int id);
-        Task<ServiceResponse<Rent>> UpdateRent(int id);
+        Task<ServiceResponse<List<Rent>>> GetRentById(int id);
+        Task<ServiceResponse<string>> UpdateRent(int id);
     }
 }
